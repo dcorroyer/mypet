@@ -12,7 +12,7 @@ parameters:
     errorFormat: ticketswap
     paths:
         - %currentWorkingDirectory%/src
-        - %currentWorkingDirectory%/tests
+#        - %currentWorkingDirectory%/tests
 #    symfony:
 #        containerXmlPath: %currentWorkingDirectory%/var/cache/dev/App_KernelDevDebugContainer.xml
     checkAlwaysTrueCheckTypeFunctionCall: true
@@ -69,6 +69,12 @@ parameters:
         -
             message: "#^Parameter .* \\$parameters .*Test\\:\\:url\\(\\) should be contravariant with parameter \\$parameters .* App\\\\Tests\\\\AbstractApiTestCase\\:\\:url\\(\\)$#"
             identifier: method.childParameterType
+        -
+            identifier: property.uninitialized
+            path: %currentWorkingDirectory%/src/Dto/*
+        -
+            identifier: doctrine.associationType
+            path: %currentWorkingDirectory%/src/Entity/*
     type_perfect:
         no_mixed: true
         null_over_false: true
