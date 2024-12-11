@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create a new pet{% endblock %}
+
+{% block body %}
+    <h1>Create a new pet</h1>
+
+    {{ form_start(createPetForm) }}
+        {{ form_widget(createPetForm) }}
+        <button class="btn">Create</button>
+    {{ form_end(createPetForm) }}
+
+    <a href="{{ path('app_default') }}">back to index</a>
+{% endblock body %}

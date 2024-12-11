@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Repository;
+namespace App\Repository\Common;
 
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository as BaseRepository;
 use Doctrine\Persistence\ManagerRegistry;
